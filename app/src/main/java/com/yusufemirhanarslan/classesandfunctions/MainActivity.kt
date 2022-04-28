@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity() {
         test()
 
         //Void - Unit
-        mySum(7,9)
+        //mySum(7,9)
 
         //Return
         var result = myMultiply(8,9)
-        textView.text = "Result: ${result}"
+        //textView.text = "Result: ${result}"
 
         //Class
         //Object & Instance
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 
     //Input & Return
     fun mySum(number1: Int,number2: Int){
-        textView.text = "Result: ${number1 + number2}"
+        resultText.text = "Result: ${number1 + number2}"
     }
 
     fun myMultiply(x: Int, y: Int): Int{
@@ -71,9 +71,29 @@ class MainActivity : AppCompatActivity() {
         return x * y
     }
 
-    fun helloKotlin(view : View){
-        textView.text = "Hello Kotlin"
+    fun makeSimpson(view : View){
+
+        val name = nameText.text.toString()
+        var age = ageText.text.toString().toIntOrNull()
+        if(age == null){
+            age = 0
+        }
+        val job = jobText.text.toString()
+
+
+        val simpson = Simpson(name,age,job)
+
+        resultText.text = "Name: ${simpson.name}, Age: ${simpson.age}, Job: ${simpson.job}"
+
     }
+
+    //Scope
+
+    fun scopeExample(view : View){
+
+        //println(name)
+    }
+
 
 
 

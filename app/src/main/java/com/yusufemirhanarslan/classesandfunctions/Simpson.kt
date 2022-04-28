@@ -1,6 +1,6 @@
 package com.yusufemirhanarslan.classesandfunctions
 
-class Simpson(var name:String, var age: Int, var job: String) {
+class Simpson(var name:String, var age: Int?, var job: String) {
 
     var hairColor = ""
 

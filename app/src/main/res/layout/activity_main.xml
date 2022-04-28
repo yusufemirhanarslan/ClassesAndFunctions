@@ -6,28 +6,86 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="98dp"
-        android:layout_height="44dp"
-        android:text="TextView"
-        android:textAlignment="center"
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="347dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:hint="Simpson Name"
+        android:inputType="textPersonName"
+        android:textColorHint="#D81111"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.237"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475" />
+        app:layout_constraintVertical_bias="0.083" />
+
+    <EditText
+        android:id="@+id/ageText"
+        android:layout_width="345dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Simpson Age"
+        android:inputType="textPersonName"
+        android:textColorHint="#D81111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameText"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <EditText
+        android:id="@+id/jobText"
+        android:layout_width="350dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="Simpson Job"
+        android:inputType="textPersonName"
+        android:textColorHint="#D81111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameText"
+        app:layout_constraintVertical_bias="0.186" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="277dp"
+        android:layout_height="52dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jobText"
+        app:layout_constraintVertical_bias="0.124" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="helloKotlin"
+        android:onClick="makeSimpson"
+        android:text="Make Simpson"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultText"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="scopeExample"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.192" />
 </androidx.constraintlayout.widget.ConstraintLayout>
